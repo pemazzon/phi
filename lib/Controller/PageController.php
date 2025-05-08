@@ -41,32 +41,19 @@ class PageController extends Controller
 		);
 
 		$csp = new ContentSecurityPolicy();
-		$csp->addAllowedFrameDomain('gpu1.thehip.app');
-		$csp->addAllowedFrameDomain('cpu1.thehip.app');
-		$csp->addAllowedFrameDomain('cpu2.thehip.app');
-		$csp->addAllowedFrameDomain('backend.thehip.app');
-		$csp->addAllowedFrameDomain('iam.ebrains.eu');
-		$csp->addAllowedFrameDomain('iam-int.ebrains.eu');
-		$csp->addAllowedFrameDomain('hip.local:9001');
-		$csp->addAllowedFrameDomain('hip.collab.local:9001');
-		$csp->addAllowedFrameDomain('collab-dev.thehip.app');
-		$csp->addAllowedFrameDomain('keycloak.thehip.app');
-		$csp->addAllowedFrameDomain('id.thehip.app');
-		$csp->addAllowedFrameDomain('dev.id.thehip.app');
-		$csp->addAllowedFrameDomain('hip-infrastructure.github.io');
+        $csp->addAllowedFrameDomain('phi.pnc.unipd.it');
+        $csp->addAllowedFrameDomain('backend.pnc.unipd.it');
+        $csp->addAllowedFrameDomain('keycloak.pnc.unipd.it');
+        $csp->addAllowedFrameDomain('hip-frontend');
+        $csp->addAllowedFrameDomain('hip-backend02');
+        $csp->addAllowedFrameDomain('keycloak');        
 
-		$csp->addAllowedConnectDomain('gpu1.thehip.app');
-		$csp->addAllowedConnectDomain('cpu1.thehip.app');
-		$csp->addAllowedConnectDomain('cpu2.thehip.app');
-		$csp->addAllowedConnectDomain('backend.thehip.app');
-		$csp->addAllowedConnectDomain('iam.ebrains.eu');
-		$csp->addAllowedConnectDomain('iam-int.ebrains.eu');
-		$csp->addAllowedConnectDomain('hip.local:9001');
-		$csp->addAllowedConnectDomain('hip.collab.local:9001');
-		$csp->addAllowedConnectDomain('collab-dev.thehip.app');
-		$csp->addAllowedConnectDomain('keycloak.thehip.app');
-		$csp->addAllowedConnectDomain('id.thehip.app');
-		$csp->addAllowedConnectDomain('dev.id.thehip.app');
+        $csp->addAllowedConnectDomain('phi.pnc.unipd.it');
+        $csp->addAllowedConnectDomain('backend.pnc.unipd.it');
+        $csp->addAllowedConnectDomain('keycloak.pnc.unipd.it');
+        $csp->addAllowedConnectDomain('hip-frontend');
+        $csp->addAllowedConnectDomain('hip-backend02');
+        $csp->addAllowedConnectDomain('keycloak');
 		$csp->addAllowedConnectDomain('stats.humanbrainproject.eu');
 
 		$response->setContentSecurityPolicy($csp);
